@@ -162,3 +162,5 @@ cython_debug/
 # Config Files
 HC_Manager/config.py
 HC_Manager/NetSuiteConfig.py
+
+
