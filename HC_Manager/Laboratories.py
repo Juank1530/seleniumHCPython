@@ -75,7 +75,6 @@ for list in range(len(config.id_patient)):
 
     # Count all rows
     rows_quantity = len(rows)
-    print(rows_quantity)
     time.sleep(2)
 
     for n in range(1, rows_quantity):
