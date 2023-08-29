@@ -65,9 +65,8 @@ for list in range(len(config.id_patient)):
     select = Select(select_element)
     time.sleep(8)
     select.select_by_index(3)
-    time.sleep(5)
-
     time.sleep(6)
+
     # Find table by id
     table = driver.find_element(By.XPATH, table_id)  # Reemplaza con el selector de tu tabla
 
