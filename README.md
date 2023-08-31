@@ -9,10 +9,11 @@ Estos scripts automatizados permiten acceder a cada uno de los apartados de la p
 
 Para poder ejecutar estos scripts, asegúrate de cumplir con los siguientes requerimientos:
 
-1. **Selenium**: Debes tener instalado el paquete de Selenium. Puedes instalarlo utilizando el siguiente comando: **pip install selenium**
-2. Se recomienda utilizar la versión más reciente de Selenium para garantizar un funcionamiento óptimo.
-3. **WebDriver del Navegador**: También necesitas el WebDriver del navegador que planeas utilizar con Selenium. Asegúrate de consultar la documentación oficial de Selenium para obtener información sobre cómo configurar y descargar el WebDriver adecuado para tu navegador.
-4. **Archivo config.py**: Dentro de cada script se hace referencia al archivo config.py, este archivo contiene:
+1. **Python**: Debes tener instalado python en su versión 3 para su instalación se pude usar la documentación ofical de Python en la [página de Python](https://www.python.org/).
+2. **Selenium**: Debes tener instalado el paquete de Selenium. Puedes instalarlo utilizando el siguiente comando: **pip install selenium**
+3. Se recomienda utilizar la versión más reciente de Selenium para garantizar un funcionamiento óptimo.
+4. **WebDriver del Navegador**: También necesitas el WebDriver del navegador que planeas utilizar con Selenium. Asegúrate de consultar la documentación oficial de Selenium para obtener información sobre cómo configurar y descargar el WebDriver adecuado para tu navegador.
+5. **Archivo config.py**: Dentro de cada script se hace referencia al archivo config.py, este archivo contiene:
 	1. La URL de la plataforma donde se descargan las HC.
 	2. Usuario y contraseña, para hacer el login
 	3. Listado de documentos de los pacientes 
