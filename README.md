@@ -1,25 +1,25 @@
 # Selenium HC Python
 
-## Automatizaciones con Selenium y Phyton (Descargas de HC)
+## Automations with Selenium and Python (HC Downloads)
 
-### Descripción
-Estos scripts automatizados permiten acceder a cada uno de los apartados de la plataforma Manager y descargar la Historia Clínica de cada paciente, en el equipo local donde se ejecute.
+### Description
+These automated scripts allow access to each section of the Manager platform and download the Clinical History of each patient on the local machine where it is executed.
 
-### Requerimientos para ejecutar
+### Requirements for Execution
 
-Para poder ejecutar estos scripts, asegúrate de cumplir con los siguientes requerimientos:
+To be able to run these scripts, make sure to meet the following requirements:
 
-1. **Python**: Debes tener instalado python en su versión 3 para su instalación se pude usar la documentación ofical de Python en la [página de Python](https://www.python.org/).
-2. **Selenium**: Debes tener instalado el paquete de Selenium. Puedes instalarlo utilizando el siguiente comando: **pip install selenium**
-3. Se recomienda utilizar la versión más reciente de Selenium para garantizar un funcionamiento óptimo.
-4. **WebDriver del Navegador**: También necesitas el WebDriver del navegador que planeas utilizar con Selenium. Asegúrate de consultar la documentación oficial de Selenium para obtener información sobre cómo configurar y descargar el WebDriver adecuado para tu navegador.
-5. **Archivo config.py**: Dentro de cada script se hace referencia al archivo config.py, este archivo contiene:
-	1. La URL de la plataforma donde se descargan las HC.
-	2. Usuario y contraseña, para hacer el login
-	3. Listado de documentos de los pacientes 
-	4. Listado de nombres con los que se van a guardar los archivos en el equipo local           
+1. **Python**: You must have Python installed, preferably version 3. You can install Python by referring to the official Python documentation on the [Python website](https://www.python.org/).
+2. **Selenium**: You need to have the Selenium package installed. You can install it using the following command: **pip install selenium** It is recommended to use the latest version of Selenium for optimal performance.
+3. **Pyautogui**: You need to have the Pyautogui package installed. You can install it using the following command: **py -m pip install pyautogui** 
+4. **WebDriver del Navegador**: You also need the WebDriver for the browser you plan to use with Selenium. Make sure to consult the official Selenium documentation for information on how to set up and download the appropriate WebDriver for your browser.
+5. **Archivo config.py**: Within each script, there is a reference to the config.py file. This file contains:
+	1. The URL of the platform where HC is downloaded.
+	2. Username and password for login.
+	3. A list of patient documents. 
+	4. A list of names under which the files will be saved on the local machine.           
 
-**Ejemplo**:
+**Example**:
 
 ```
 username = "user"  
@@ -39,8 +39,8 @@ etc...
 ]
 ```
 
-### Configuración
+### Configuration
 
-Antes de ejecutar los scripts, asegúrate de configurar adecuadamente el WebDriver y cualquier otra configuración necesaria según la documentación de Selenium en la [página de Selenium](https://www.selenium.dev/downloads/).
+Before running the scripts, make sure to properly configure the WebDriver and any other necessary settings according to the Selenium documentation on the [Selenium website](https://www.selenium.dev/downloads/).
 
-¡Listo! Con estos requisitos cumplidos, estarás listo para utilizar los scripts de automatización y descargar las Historias Clínicas de los pacientes desde la plataforma Manager.
+Ready! With these requirements met, you'll be ready to use the automation scripts and download the Clinical Histories of the patients from the Manager platform.
