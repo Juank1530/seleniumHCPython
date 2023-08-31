@@ -21,7 +21,7 @@ xpath_btn_close = "/html/body/div[11]/div[1]/div/a[1]"
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
 
-driver_service = Service(executable_path='C:\Drivers')
+driver_service = Service(executable_path='C:/Drivers/64/chromedriver.exe')
 driver = webdriver.Chrome(service=driver_service)
 
 # Browser's driver setup
@@ -54,18 +54,6 @@ time.sleep(15)
 # Open HC
 fa = wait.until(EC.element_to_be_clickable((By.XPATH, xpath_thc)))
 fa.click()
-
-"""
-# To send the new patient
-id = wait.until(EC.element_to_be_clickable((By.NAME, patient_id)))
-id.click()
-id.clear()
-id.send_keys(config.id_patient[0])
-
-#To change the focus for the new patient
-id.send_keys(Keys.TAB)
-time.sleep(7)
-"""
 
 for list in range(len(config.id_patient)):
 
