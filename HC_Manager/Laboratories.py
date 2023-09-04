@@ -122,8 +122,4 @@ for list in range(len(config.id_patient)):
     id.clear()
     id.send_keys(config.id_patient[list+1])
 
-    #To change the focus for the new patient
-    patient_name = driver.find_element(By.ID, "nombre_paciente_presbicia").send_keys(Keys.TAB)
-    time.sleep(4)
-
 driver.quit()

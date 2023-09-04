@@ -20,7 +20,6 @@ xpath_btn_close = "/html/body/div[13]/div[1]/div/a[1]"
 # Browser's driver setup
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
-
 driver_service = Service(executable_path='C:/Drivers/64/chromedriver.exe')
 driver = webdriver.Chrome(service=driver_service)
 

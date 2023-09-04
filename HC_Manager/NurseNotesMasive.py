@@ -23,7 +23,6 @@ max_rows = '/html/body/div[1]/div[1]/section[2]/div[3]/div/div[2]/form/div/div[2
 # Browser's driver setup
 options = webdriver.ChromeOptions()
 options.add_argument("--start-maximized")
-
 driver_service = Service(executable_path='C:/Drivers/64/chromedriver.exe')
 driver = webdriver.Chrome(service=driver_service)
 
