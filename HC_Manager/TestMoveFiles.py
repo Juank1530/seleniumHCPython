@@ -4,13 +4,11 @@ import glob
 months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre']
 number = ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
 year = '2023'
-specialty = 'Notas_de_enfermería_yo_Evoluciones_de_las_notas'
-
-
+specialty = 'Formulación'
 
 for i in range(len(months)):
     # Ruta del directorio de origen
-    ruta_directorio_origen = 'C:/Users/juan.tamara/Desktop/HC_manager/files/stage/nurseNotes/'
+    ruta_directorio_origen = 'C:/Users/juan.tamara/Desktop/HC_manager/files/stage/formulation/'
 
     # Patrón para buscar archivos que comienzan con "2020-03-"
     patron_archivos = f'{year}-{number[i]}-*'
