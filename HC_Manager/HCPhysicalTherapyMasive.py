@@ -69,7 +69,6 @@ for list in range(len(config.id_patient)):
     name = driver.find_element(By.XPATH, patient_name)
     nameAttribute = name.get_attribute("value")
     nameAttribute = nameAttribute.strip()
-    print(nameAttribute)
 
     while attribute == 'btn-primero':
 
@@ -80,7 +79,8 @@ for list in range(len(config.id_patient)):
         dateAttribute = dateAttribute.split()[0]
         dateAttribute = dateAttribute.replace("/","-")
         dateAttribute = dateAttribute.strip()
-        print(dateAttribute)
+        dateAttribute = dateAttribute.split('-')
+        dateAttribute = dateAttribute[2] + '-' + dateAttribute[1] + '-' + dateAttribute[0]
 
         time.sleep(5)
         # Select print button
