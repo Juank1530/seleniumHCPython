@@ -15,7 +15,7 @@ for j in range(len(year)):
         origin_path = f'C:/Users/juan.tamara/Desktop/HC_manager/files/stage/{specialty_origin}/'
 
         # Pattern to search for files starting with "2020-03-"
-        files_pattern = f'{year[j]}_{number[i]}_*'
+        files_pattern = f'{year[j]}-{number[i]}-*'
 
         # To Define the new destination path where you want to move the files
         destiny_path = f'C:/Users/juan.tamara/Desktop/HC_manager/{year[j]}/{number[i]}_{months[i]}/{specialty_destiny}/'
