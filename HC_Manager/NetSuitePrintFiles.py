@@ -7,10 +7,9 @@ import datetime
 import time
 import NetSuiteConfig
 import pyautogui
+import sys
 
 try:
-
-
     # Get current date and year
     current_year = datetime.datetime.now().year
 
@@ -19,8 +18,11 @@ try:
     chrome_options.add_argument("--start-maximized")
     driver_service = Service(executable_path=NetSuiteConfig.CHROME_DRIVER_PATH)
     driver = webdriver.Chrome(service=driver_service, options=chrome_options)
-except NoSuchElementException:
-    print('You have to check the Google driver and update it. Please go to https://chromedriver.chromium.org/downloads  and download the last stable version.')
+except Exception as e:
+    print(f'Error in driver setup: {e}')
+    print(
+        'Also you can check the Google driver and update it. Please go to https://chromedriver.chromium.org/downloads  and download the last stable version.')
+    sys.exit(1)
 
 
 # Login whit Google Authenticator
