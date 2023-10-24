@@ -27,8 +27,8 @@ except Exception as e:
 
 # Login whit Google Authenticator
 driver.get(NetSuiteConfig.BASE_URL)
-driver.find_element(By.ID, NetSuiteConfig.email).send_keys(NetSuiteConfig.username)
-driver.find_element(By.ID, NetSuiteConfig.password).send_keys(NetSuiteConfig.password)
+driver.find_element(By.ID, NetSuiteConfig.email).send_keys(NetSuiteConfig.user_name)
+driver.find_element(By.ID, NetSuiteConfig.password).send_keys(NetSuiteConfig.user_password)
 driver.find_element(By.ID, NetSuiteConfig.remenberme).click()
 driver.find_element(By.ID, NetSuiteConfig.submit_btn).click()
 google = input('Please enter your Google Authenticator: ')
@@ -113,13 +113,13 @@ else:
 
             try:
                 # Get cell value
-                document = driver.find_element(By.XPATH,'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[16]/a')
+                document = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[16]/a')
                 value = document.text.strip()
 
                 # Validate name and add to the list and print if it is not exist
                 if value not in documents_list:
                     documents_list.append(value)
-                    document = driver.find_element(By.XPATH,'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[16]/a').click()
+                    document = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[16]/a').click()
                     time.sleep(4)
                     pyautogui.click(x=NetSuiteConfig.CORD_X, y=NetSuiteConfig.CORD_Y)
                     pyautogui.hotkey('Ctrl', 'p')
@@ -130,7 +130,7 @@ else:
             except NoSuchElementException:
 
                 # Write a log if is not possible to find an element
-                error2 = driver.find_element(By.XPATH, '/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[3]/a')
+                error2 = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[3]/a')
                 error_value2 = error2.text.strip()
                 if error_value2 not in error_list:
                     error_list.append(error_value2)
@@ -139,10 +139,5 @@ else:
                         file.write('La factura # ' + str(error_value2) + ' no tiene documentos asociados.' + "\n")
         time.sleep(3)
         driver.find_element(By.CLASS_NAME, NetSuiteConfig.next_page_class).click()
-
 driver.quit()
-##except NoSuchElementException:
-##    print('You have to check the Google driver and update it. Please go to https://chromedriver.chromium.org/downloads  and download the last stable version.')
-
-
 
