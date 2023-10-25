@@ -37,10 +37,13 @@ driver.find_element(By.ID, NetSuiteConfig.remenberme_authenticator).click()
 driver.find_element(By.ID, NetSuiteConfig.authenticator_btn).click()
 
 # Into Day and Month to generate the report
-day = int(input('Please into the day that you want to generate the report : '))
-month = int(input('Please into the month that you want to generate the report : '))
+start_day = int(input('Please into the start day that you want to generate the report : '))
+start_month = int(input('Please into the start month that you want to generate the report : '))
+#
+end_day = int(input('Please into the end day that you want to generate the report : '))
+end_month = int(input('Please into the end month that you want to generate the report : '))
 
-if day > 31 or month > 12:
+if start_day > 31 or end_day > 31 or start_month > 12 or end_month > 12:
     print('Invalid day or month :(')
 else:
     driver.find_element(By.ID, NetSuiteConfig.search_box).click()
@@ -53,9 +56,9 @@ else:
     # Send dates to generate the report
     driver.find_element(By.CLASS_NAME, NetSuiteConfig.filters_class).click()
     driver.find_element(By.XPATH, NetSuiteConfig.start_date).click()
-    driver.find_element(By.XPATH, NetSuiteConfig.start_date).send_keys(f'{day}/{month}/{current_year}')
+    driver.find_element(By.XPATH, NetSuiteConfig.start_date).send_keys(f'{start_day}/{start_month}/{current_year}')
     driver.find_element(By.XPATH, NetSuiteConfig.end_date).click()
-    driver.find_element(By.XPATH, NetSuiteConfig.end_date).send_keys(f'{day}/{month}/{current_year}')
+    driver.find_element(By.XPATH, NetSuiteConfig.end_date).send_keys(f'{end_day}/{end_month}/{current_year}')
     driver.find_element(By.XPATH, NetSuiteConfig.end_date).send_keys(Keys.TAB)
     time.sleep(10)
 
