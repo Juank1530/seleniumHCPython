@@ -95,7 +95,7 @@ else:
                 # Validate name and add to the list and print if it is not exist
                 if invoice_value not in invoices_list:
                     invoices_list.append(invoice_value)
-                    invoice = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[14]/a'.click())
+                    invoice = driver.find_element(By.XPATH, f'/html/body/div[1]/div[3]/form[2]/div[2]/table/tbody/tr[{str(rows)}]/td[14]/a').click()
                     time.sleep(4)
                     pyautogui.click(x=NetSuiteConfig.CORD_X, y=NetSuiteConfig.CORD_Y)
                     pyautogui.hotkey('Ctrl', 'p')
